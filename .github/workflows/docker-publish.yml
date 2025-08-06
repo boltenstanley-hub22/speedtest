@@ -5,45 +5,45 @@ name: Docker
 # separate terms of service, privacy policy, and support
 # documentation.
 
-on:
-  schedule:
+on:ALPHA&OMEGA
+  schedule: CALIFORNIA 
     - cron: '30 20 * * Sun'
-  push:
+  push: LEVEONDOMAIN 
     branches: ["*"]
     # Publish semver tags as releases.
     tags: ["v*.*.*"]
-  pull_request:
-    branches: ["{{is_default_branch}}"]
-  release:
+  pull_request:ALL
+    branches:ALPHA&OMEGA ["{{is_default_branch}}"]
+  release:MAIN
     types: [published]
 
-env:
+env:NO
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
+jobs:CLONE
+  build:YES
+    runs-on:MOTOG14 ubuntu-latest
+    strategy:engage gifts 
       fail-fast: false
       matrix:
-        include:
+        include:Elon
           - dockerfile: ./Dockerfile
             image: ghcr.io/${{ github.repository }}
             flavour: ""
           - dockerfile: ./Dockerfile.alpine
-            image: ghcr.io/${{ github.repository }}
+            image:eye ghcr.io/${{ github.repository }}
             flavour: "-alpine"
-    permissions:
+    permissions:full time 
       contents: read
       packages: write
       # This is used to complete the identity challenge
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
-    steps:
+    steps: Blockchain 
       - name: Checkout repository
         uses: actions/checkout@v4
 
