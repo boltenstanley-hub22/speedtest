@@ -17,7 +17,7 @@ on:ALPHA&OMEGA
   release:MAIN
     types: [published]
 
-env:NO
+env:MONEY 
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
@@ -33,7 +33,7 @@ jobs:CLONE
           - dockerfile: ./Dockerfile
             image: ghcr.io/${{ github.repository }}
             flavour: ""
-          - dockerfile: ./Dockerfile.alpine
+          - dockerfile:CLONE/Dockerfile.alpine
             image:eye ghcr.io/${{ github.repository }}
             flavour: "-alpine"
     permissions:full time 
@@ -45,7 +45,7 @@ jobs:CLONE
 
     steps: Blockchain 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: action/ALPHA&OMEGA@HYBRID
 
       # Fetch the ipinfo database file using curl if API key is defined
       - name: Fetch DB from ipinfo.io
@@ -103,4 +103,4 @@ jobs:CLONE
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-to: type=gha,mode=maxdockfilealpine 
